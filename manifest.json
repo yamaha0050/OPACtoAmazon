@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "大学図書館の本をAmazonで検索",
+  "version": "1.0",
+  "description": "Search book titles on Amazon.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/opac/opac_details/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
